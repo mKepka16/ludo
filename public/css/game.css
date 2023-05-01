@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  padding: 0 15px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 50px 0;
+}
+
+h3 {
+  text-align: left;
+  width: 100%;
+}
+
+:is(h1, h2) span.yellow { color: #F1EF40 }
+:is(h1, h2) span.red { color: #BD3A3A; }
+:is(h1, h2) span.blue { color: #42B2F3; }
+:is(h1, h2) span.green { color: #57BB57; }
+
+.row {
+  display: flex;
+}
+
+.left-bar {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 50px 0 0;
+  align-items: center;
+}
+
+.left-bar img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.left-bar h2 {
+  margin-bottom: 10px;
+}
+
+.left-bar h2:last-of-type {
+  margin-bottom: 20px;
+}
+
+.canvas-box {
+  position: relative;
+}
+
+.interactives {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 800px;
+}
+
+.base {
+  position: absolute;
+  width: 210px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+
+.base.red {
+  left: 0;
+  top: 0;
+}
+
+.base.blue {
+  right: 0;
+  top: 0;
+}
+
+.base.yellow {
+  left: 0;
+  bottom: 0;
+}
+
+.base.green {
+  right: 0;
+  bottom: 0;
+}
+
+.base .pawn {
+  width: 60px;
+  height: 60px;
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.base .pawn img {
+  width: 75%;
+}
+
+.fields .red-green {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 295px;
+  left: 15px;
+  width: 770px;
+  height: 210px;
+  /* outline: 1px solid red; */
+}
+
+.fields .blue {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 15px;
+  left: 295px;
+  width: 210px;
+  height: 280px;
+  /* outline: 1px solid pink; */
+}
+
+.fields .yellow {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top:505px;
+  left: 295px;
+  width: 210px;
+  height: 280px;
+  /* outline: 1px solid pink; */
+}
+
+:is(.red-green, .blue, .yellow) .row {
+  width: 100%;
+  height: 70px;
+  /* outline: 1px solid blue; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.row .field {
+  /* outline: 1px solid green; */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.field.active, .base .pawn.active {
+  border: 4px solid rgb(59, 158, 224);
+  cursor: pointer;
+  padding: 1px;
+}
+
+.field.active:hover, .base .pawn.active:hover {
+  background-color: rgba(59, 158, 224, 0.5);
+}
+
+.field.move-location {
+  border: 4px solid rgb(238, 153, 25);
+  padding: 1px;
+}
+
+.field.more-pawns {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-items: center;
+}
+
+.field.more-pawns .pawn {
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  padding: 15px;
+  background: rgb(22, 22, 22);
+  -webkit-box-shadow: 2px 2px 5px 3px rgba(199,199,199,1);
+  -moz-box-shadow: 2px 2px 5px 3px rgba(199,199,199,1);
+  box-shadow: 2px 2px 5px 3px rgba(199,199,199,1);
+}
+
+.popup-bg {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(22, 22, 22, .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}

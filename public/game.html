@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game</title>
+  <link rel="stylesheet" href="./../../css/main.css">
+  <link rel="stylesheet" href="./../../css/game.css">
+  <script src="./../../js/game.js" type="module"></script>
+</head>
+<body>
+  <div class="game">
+    <h1>Room 1</h1>
+
+    <div class="row">
+      <div class="left-bar">
+        <h2>Turn: <span id="turn">none</span></h2>
+        <h2 class="timer">60s</h2>
+
+        <img src="../../imgs/cube_1.png" alt="">
+        <button disabled>Roll the dice</button>
+      </div>
+      <div class="canvas-box">
+        <canvas id="root" width="800" height="800">
+          Sorry, canvas is unsupported.
+        </canvas>
+        <div class="interactives">
+
+          <div class="bases">
+            <div class="base red"></div>
+            <div class="base blue"></div>
+            <div class="base green"></div>
+            <div class="base yellow"></div>
+        </div>
+
+        <div class="fields">
+          <div class="red-green">
+            <div class="row">
+              <div class="field" data-field-id="1"></div>
+              <div class="field" data-field-id="2"></div>
+              <div class="field" data-field-id="3"></div>
+              <div class="field" data-field-id="4"></div>
+              <div class="field" data-field-id="5"></div>
+              <div class="field" data-field-id="blue-4"></div>
+              <div class="field" data-field-id="15"></div>
+              <div class="field" data-field-id="16"></div>
+              <div class="field" data-field-id="17"></div>
+              <div class="field" data-field-id="18"></div>
+              <div class="field" data-field-id="19"></div>
+            </div>
+
+            <div class="row">
+              <div class="field" data-field-id="40"></div>
+              <div class="field" data-field-id="red-1"></div>
+              <div class="field" data-field-id="red-2"></div>
+              <div class="field" data-field-id="red-3"></div>
+              <div class="field" data-field-id="red-4"></div>
+              <div class="field" data-field-id="empty"></div>
+              <div class="field" data-field-id="green-4"></div>
+              <div class="field" data-field-id="green-3"></div>
+              <div class="field" data-field-id="green-2"></div>
+              <div class="field" data-field-id="green-1"></div>
+              <div class="field" data-field-id="20"></div>
+            </div>
+
+            <div class="row">
+              <div class="field" data-field-id="39"></div>
+              <div class="field" data-field-id="38"></div>
+              <div class="field" data-field-id="37"></div>
+              <div class="field" data-field-id="36"></div>
+              <div class="field" data-field-id="35"></div>
+              <div class="field" data-field-id="yellow-4"></div>
+              <div class="field" data-field-id="25"></div>
+              <div class="field" data-field-id="24"></div>
+              <div class="field" data-field-id="23"></div>
+              <div class="field" data-field-id="22"></div>
+              <div class="field" data-field-id="21"></div>
+            </div>
+          </div>
+
+          <div class="blue">
+
+            <div class="row">
+              <div class="field" data-field-id="9"></div>
+              <div class="field" data-field-id="10"></div>
+              <div class="field" data-field-id="11"></div>
+            </div>
+
+            <div class="row">
+              <div class="field" data-field-id="8"></div>
+              <div class="field" data-field-id="blue-1"></div>
+              <div class="field" data-field-id="12"></div>
+            </div>
+
+            <div class="row">
+              <div class="field" data-field-id="7"></div>
+              <div class="field" data-field-id="blue-2"></div>
+              <div class="field" data-field-id="13"></div>
+            </div>
+
+            <div class="row">
+              <div class="field" data-field-id="6"></div>
+              <div class="field" data-field-id="blue-3"></div>
+              <div class="field" data-field-id="14"></div>
+            </div>
+            
+          </div>
+
+
+          <div class="yellow">
+
+            <div class="row">
+              <div class="field" data-field-id="34"></div>
+              <div class="field" data-field-id="yellow-3"></div>
+              <div class="field" data-field-id="26"></div>
+            </div>
+
+            <div class="row">
+              <div class="field" data-field-id="33"></div>
+              <div class="field" data-field-id="yellow-2"></div>
+              <div class="field" data-field-id="27"></div>
+            </div>
+
+            <div class="row">
+              <div class="field" data-field-id="32"></div>
+              <div class="field" data-field-id="yellow-1"></div>
+              <div class="field" data-field-id="28"></div>
+            </div>
+
+            <div class="row">
+              <div class="field" data-field-id="31"></div>
+              <div class="field" data-field-id="30"></div>
+              <div class="field" data-field-id="29"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="popup-bg">
+    <div class="popup">
+      <h1>Wygrywa: <span class="who-win">Kempix123</span></h1>
+      <h4>Pokój się zamknie za 5s.</h4>
+    </div>
+  </div>
+</body>
+</html>

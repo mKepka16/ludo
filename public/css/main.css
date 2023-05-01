@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Montserrat:wght@300;400;500&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Akaya Telivigala', cursive;
+}
+
+body {
+  background-color: rgb(22, 22, 22);
+  color: rgb(221, 221, 221);
+}
+
+h1, h2, h3, h4, h5, h6, span, p, button, input, div {
+  font-family: 'Montserrat', sans-serif;
+  font-size: inherit;
+  background: none;
+  border: none;
+  color: inherit;
+  user-select: none;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  font-family: 'Akaya Telivigala', cursive;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+button:disabled {
+  color: rgb(145, 145, 145);
+  cursor:default;
+}
+
+button:hover:not(:disabled) {
+  color:rgb(218, 154, 255);
+}

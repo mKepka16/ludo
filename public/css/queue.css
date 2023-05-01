@@ -1,0 +1,167 @@
+h1 {
+  margin: 50px 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.players-count {
+  font-size: 2em;
+  padding: 10px;
+}
+
+img {
+  width: 300px;
+  margin: 20px;
+}
+
+.players {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.player {
+  padding: 15px 25px;
+}
+
+.red {
+  color: rgb(189, 58, 58);
+}
+
+.red.ready {
+  border-color: rgb(189, 58, 58);
+}
+
+.blue {
+  color: rgb(66, 178, 243);;
+}
+
+.blue.ready {
+  border-color: rgb(66, 178, 243);
+}
+
+.yellow {
+  color: rgb(241, 239, 64);
+}
+
+.yellow.ready {
+  border-color: rgb(241, 239, 64);
+}
+
+.green {
+  color: rgb(87, 187, 87);
+}
+
+.green.ready {
+  border-color: rgb(87, 187, 87);
+}
+
+.ready {
+  border: 1px solid white;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.ready::after {
+  content: 'Ready';
+  position: absolute;
+  top: 0;
+  left: 4px;
+  font-size: .8em;
+  color: white;
+  transform: translateY(-50%);
+  background-color: #161616;
+  padding: 0 5px;
+}
+
+.buttons {
+  position: relative;
+  margin: 100px 0 50px 0;
+}
+
+.ready-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(18, 82, 18);
+  z-index: -1;
+  clip-path: circle(0% at 50% 50%);
+  transition: all .5s ease;
+}
+
+.ready-btn {
+  padding: 15px 50px;
+  border: 1px solid #ddd;
+  position: relative;
+}
+
+
+.ready-btn:hover::before {
+  clip-path: circle(110% at 50% 50%);
+}
+
+button.ready-btn:hover {
+  border: 1px solid rgb(18, 82, 18);
+  color: white;
+}
+
+.unready-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(173, 85, 12);
+  z-index: -1;
+  clip-path: circle(0% at 50% 50%);
+  transition: all .5s ease;
+}
+
+.unready-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(18, 82, 18);
+  z-index: -2;
+}
+
+.unready-btn {
+  padding: 15px 50px;
+  border: 1px solid rgb(18, 82, 18);
+  position: relative;
+}
+
+
+.unready-btn:hover::before {
+  clip-path: circle(110% at 50% 50%);
+}
+
+button.unready-btn:hover {
+  border: 1px solid rgb(173, 85, 12);
+  color: white;
+}
+
+.vote-btn {
+  margin-left: 35px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.vote-status {
+  color:rgb(218, 154, 255);
+}

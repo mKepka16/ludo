@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Queue</title>
+  <script src="./../../js/queue.js" type="module" defer></script>
+  <link rel="stylesheet" href="./../../css/main.css">
+  <link rel="stylesheet" href="./../../css/queue.css">
+</head>
+<body>
+  <h1>Waiting for players...</h1>
+
+  <div class="content">
+    <div class="players-count">0/4</div>
+    <img src="./../../imgs/queue-icon.svg" alt="queue-icon">
+
+    <div class="players">
+      <div class="player empty">Empty</div>
+      <div class="player empty">Empty</div>
+      <div class="player empty">Empty</div>
+      <div class="player empty">Empty</div>
+    </div>
+
+    <div class="buttons">
+      <button class="ready-btn">Ready</button>
+      <!-- <button class="unready-btn">Unready</button> -->
+      <button class="vote-btn">Vote for start <span class="vote-status">0/3</span></button>
+    </div>
+  </div>
+</body>
+</html>
